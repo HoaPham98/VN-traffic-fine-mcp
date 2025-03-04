@@ -1,0 +1,5 @@
+{
+  "extends": "./tsconfig.json",
+  "include": ["src/mcp/**/*", "src/phatnguoi.ts", "src/engines/**/*", "src/types.ts"],
+  "exclude": ["node_modules", "dist", "src/server.ts", "server.ts"]
+}

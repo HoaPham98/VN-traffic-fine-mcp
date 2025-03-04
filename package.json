@@ -1,0 +1,40 @@
+{
+  "name": "phatnguoi",
+  "version": "1.0.0",
+  "main": "dist/server.js",
+  "bin": {
+    "phatnguoi": "./bin/cli.js"
+  },
+  "type": "module",
+  "scripts": {
+    "typeCheck": "tsc --noEmit",
+    "dev": "tsx watch server.ts",
+    "start": "tsx server.ts",
+    "build": "tsc",
+    "build:mcp": "tsx --tsconfig tsconfig.mcp.json src/mcp/server.ts",
+    "build:bin": "tsx --tsconfig tsconfig.bin.json bin/cli.ts",
+    "mcp": "tsx src/mcp/server.ts",
+    "cli": "tsx bin/cli.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "anyideaz",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/anyideaz/phatnguoi-api.git"
+  },
+  "license": "ISC",
+  "description": "Tra cuu phat nguoi - Vietnamese traffic violation lookup API",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.29.0",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "node-html-parser": "^7.1.0",
+    "tesseract.js": "^7.0.0"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.0.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.7.0"
+  }
+}
