@@ -4,14 +4,15 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project
 
-Vietnamese traffic violation lookup — queries 3 APIs (checkphatnguoi.vn → zm.io.vn → phatnguoi.vn) to find violations by license plate. No captcha required.
+Vietnamese traffic violation lookup — queries 3 APIs (checkphatnguoi.vn → zm.io.vn → phatnguoi.vn) to find violations by license plate. No captcha required. Published as npm package `@iamqh/vn-traffic-fine`.
 
 ## Commands
 
 ```sh
 npm run dev       # watch mode (tsx)
-npm run start     # production
-npm run mcp      # MCP server (stdio transport)
+npm run start     # production (dist/server.js)
+npm run build     # tsc
+npm run mcp      # MCP server (dist/src/mcp/server.js)
 npm run cli -- <plate> [type] [-v]
 npm run typeCheck # tsc --noEmit
 ```

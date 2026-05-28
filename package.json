@@ -1,35 +1,34 @@
 {
-  "name": "phatnguoi",
-  "version": "1.0.0",
-  "main": "dist/server.js",
-  "bin": {
-    "phatnguoi": "./bin/cli.js"
-  },
+  "name": "@iamqh/vn-traffic-fine",
+  "version": "1.0.5",
+  "description": "Tra cuu phat nguoi - Vietnamese traffic violation lookup (MCP server + CLI)",
   "type": "module",
+  "bin": {
+    "vn-traffic-fine": "./dist/bin/cli.js",
+    "vn-traffic-mcp": "./dist/src/mcp/server.js"
+  },
+  "files": ["dist"],
+  "main": "./dist/server.js",
   "scripts": {
     "typeCheck": "tsc --noEmit",
-    "dev": "tsx watch server.ts",
-    "start": "tsx server.ts",
     "build": "tsc",
-    "build:mcp": "tsx --tsconfig tsconfig.mcp.json src/mcp/server.ts",
-    "build:bin": "tsx --tsconfig tsconfig.bin.json bin/cli.ts",
-    "mcp": "tsx src/mcp/server.ts",
-    "cli": "tsx bin/cli.ts",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "tsx watch server.ts",
+    "start": "node dist/server.js",
+    "mcp": "node dist/src/mcp/server.js",
+    "cli": "node dist/bin/cli.js",
+    "prepublishOnly": "tsc"
   },
-  "author": "anyideaz",
+  "author": "HoaPham98",
   "repository": {
     "type": "git",
-    "url": "https://github.com/anyideaz/phatnguoi-api.git"
+    "url": "https://github.com/HoaPham98/VN-traffic-fine-mcp.git"
   },
-  "license": "ISC",
-  "description": "Tra cuu phat nguoi - Vietnamese traffic violation lookup API",
+  "license": "MIT",
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.29.0",
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
-    "node-html-parser": "^7.1.0",
-    "tesseract.js": "^7.0.0"
+    "node-html-parser": "^7.1.0"
   },
   "devDependencies": {
     "@types/express": "^5.0.0",

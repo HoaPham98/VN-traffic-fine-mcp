@@ -28,7 +28,7 @@ Tuy chon:
 }
 
 const plate = args[0];
-const vehicleType = (args.find((a) => !a.startsWith("-")) ?? "1") as VehicleType;
+const vehicleType = (["1", "2", "3"].includes(args[1] ?? "") ? args[1] : "1") as VehicleType;
 const verbose = args.includes("-v") || args.includes("--verbose");
 
 console.log(`\nTra cuu phat nguoi  [${new Date().toLocaleString("vi-VN")}]`);
